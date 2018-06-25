@@ -6,7 +6,6 @@ while True:
     print("(genero, estatura, peso, cuello, cintura, cadera)")
     datos = input()
 
-    nombre = "NOMBRE DE USUARIO"
     genere = datos.split(" ")[0]
     height = float(datos.split(" ")[1])
     weight = float(datos.split(" ")[2])
@@ -29,7 +28,7 @@ while True:
     #normalizate It an scale from 0 to 100
         body_fat_100 = -3.3333 * body_fat + 126.67
         ffmi_100 = 10* ffmi - 150
-        anarkia_index = (body_fat_100 + ffmi_100)/2
+        index = (body_fat_100 + ffmi_100)/2
 
     if genere is 'f':
         # calculate basic data
@@ -42,7 +41,7 @@ while True:
         # normalizate It an scale from 0 to 100
         body_fat_100 = -2.6316 * body_fat + 139.49
         ffmi_100 = 10 * ffmi - 100
-        anarkia_index = (body_fat_100 + ffmi_100) / 2
+        index = (body_fat_100 + ffmi_100) / 2
 
     print("Grasa Corporal: " + str(body_fat))
     print("Indice de Masa Libre de Grasa: " + str(ffmi))
@@ -50,6 +49,6 @@ while True:
     print(nombre)
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
-    print("Total: " + str(int(anarkia_index)))
+    print("Total: " + str(int(index)))
 
     # m 171 70 40.5 78 0
