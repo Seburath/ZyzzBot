@@ -50,5 +50,3 @@ while True:
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
     print("Total: " + str(int(index)))
-
-    # m 171 70 40.5 78 0
