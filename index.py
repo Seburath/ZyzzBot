@@ -46,7 +46,6 @@ while True:
     print("Grasa Corporal: " + str(body_fat))
     print("Indice de Masa Libre de Grasa: " + str(ffmi))
     print("/////////////////////////// PUNTAJE /100 //////////////////////////////////")
-    print(nombre)
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
     print("Total: " + str(int(index)))
