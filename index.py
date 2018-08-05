@@ -24,11 +24,10 @@ while True:
         ffmi = lean_mass / ((height/100) * (height/100))
         ffmi = ffmi + (6.1 * (1.8 - height/100))
 
-
     #normalizate It an scale from 0 to 100
         body_fat_100 = -3.3333 * body_fat + 126.67
         ffmi_100 = 10* ffmi - 150
-        index = (body_fat_100 + ffmi_100)/2
+        index_100 = (body_fat_100 + ffmi_100)/2
 
     if genere is 'f':
         # calculate basic data
@@ -41,11 +40,11 @@ while True:
         # normalizate It an scale from 0 to 100
         body_fat_100 = -2.6316 * body_fat + 139.49
         ffmi_100 = 10 * ffmi - 100
-        index = (body_fat_100 + ffmi_100) / 2
+        index_100 = (body_fat_100 + ffmi_100) / 2
 
     print("Grasa Corporal: " + str(body_fat))
     print("Indice de Masa Libre de Grasa: " + str(ffmi))
     print("/////////////////////////// PUNTAJE /100 //////////////////////////////////")
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
-    print("Total: " + str(int(index)))
+    print("Total: " + str(int(index_100)))
