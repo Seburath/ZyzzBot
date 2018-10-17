@@ -14,6 +14,18 @@ def w_cell(hoja, col, row, val):
     hoja.cell(column=col, row=row).value = val
     return
 
+w_cell(aplicacion, 1, y, )
+w_cell(aplicacion, 2, y, )
+w_cell(aplicacion, 3, y, )
+w_cell(aplicacion, 4, y, ap['form_num'])
+w_cell(aplicacion, 5, y, ap['form_num'])
+w_cell(aplicacion, 6, y, ap['form_num'])
+w_cell(aplicacion, 7, y, ap['form_num'])
+w_cell(aplicacion, 8, y, ap['form_num'])
+
+
+
+
 #carga valores de /aplicaciones
 y=1
 for aplicacion in aplicaciones:
