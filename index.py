@@ -1,6 +1,6 @@
 import math
 import time
-import save_excel
+from save_excel import save
 
 while True:
     print("//////////////////////////////", time.strftime("%d/%m/%y"), "///////////////////////////////////")
@@ -43,10 +43,10 @@ while True:
         ffmi_100 = 10 * ffmi - 100
         index_100 = (body_fat_100 + ffmi_100) / 2
 
+    save(genere, height, weight, neck, waist, hip, body_fat, ffmi, body_fat_100, ffmi_100, index_100)
     print("Grasa Corporal: " + str(body_fat))
     print("Indice de Masa Libre de Grasa: " + str(ffmi))
     print("/////////////////////////// PUNTAJE /100 //////////////////////////////////")
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
     print("Total: " + str(int(index_100)))
-    save_excel.save(genere, height, weight, neck, waist, hip, str(body_fat), str(ffmi), str(int(body_fat_100)), str(int(ffmi_100))), str(int(index_100))))
