@@ -1,5 +1,6 @@
 import math
 import time
+import save_excel
 
 while True:
     print("//////////////////////////////", time.strftime("%d/%m/%y"), "///////////////////////////////////")
@@ -48,3 +49,4 @@ while True:
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
     print("Total: " + str(int(index_100)))
+    save_excel.save(genere, height, weight, neck, waist, hip, str(body_fat), str(ffmi), str(int(body_fat_100)), str(int(ffmi_100))), str(int(index_100))))
