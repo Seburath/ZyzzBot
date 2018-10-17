@@ -3,15 +3,16 @@ from openpyxl import load_workbook
 def save_excel.save(genere, height, weight, neck, waist, hip, str(body_fat), str(ffmi), str(int(body_fat_100)), str(int(ffmi_100))), str(int(index_100)))):
     return
 
-
-copy('base/Matriz.xlsx','docs_generados/')
-libro_matriz = load_workbook(filename = 'docs_generados/Matriz.xlsx')
-hoja_matriz = libro_matriz["Hoja1"]
-
+data = load_workbook(filename = 'data.xlsx')
+hoja = data["Hoja1"]
 
 #acotacion dela funcion para obtener valores de excel
 def cell(hoja, col, row):
     return hoja.cell(column=col, row=row).value
+
+def w_cell(hoja, col, row, val):
+    hoja.cell(column=col, row=row).value = val
+    return
 
 #carga valores de /aplicaciones
 y=1
