@@ -30,6 +30,7 @@ while True:
         ffmi_100 = 10* ffmi - 150
         index_100 = (body_fat_100 + ffmi_100)/2
 
+
     if genere is 'f':
         # calculate basic data
         body_fat = 495 / (1.29579 - 0.35004 * math.log((waist + hip - neck), 10) + 0.22100 * math.log(height, 10)) - 450
