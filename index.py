@@ -3,10 +3,9 @@ import time
 from save_excel import save
 
 while True:
-    print("//////////////////////////////", time.strftime("%d/%m/%y"), "///////////////////////////////////")
+    print("//////////////////", time.strftime("%d/%m/%y"), "///////////////////")
     print("(genero, estatura, peso, cuello, cintura, cadera)")
     datos = input()
-
     genere = datos.split(" ")[0]
     height = float(datos.split(" ")[1])
     weight = float(datos.split(" ")[2])
@@ -46,7 +45,7 @@ while True:
 
     print("Grasa Corporal: " + str(body_fat))
     print("Indice de Masa Libre de Grasa: " + str(ffmi))
-    print("/////////////////////////// PUNTAJE /100 //////////////////////////////////")
+    print("/////////////////////////// PUNTAJE /100 ///////////////////////////")
     print("Grasa Corporal: " + str(int(body_fat_100)))
     print("Musculatura: " + str(int(ffmi_100)))
     print("Total: " + str(int(index_100)))
