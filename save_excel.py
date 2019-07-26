@@ -1,4 +1,4 @@
-jrom openpyxl import load_workbook
+from openpyxl import load_workbook
 
 
 def save(genere, height, weight, neck, waist, hip, body_fat, ffmi, body_fat_100, ffmi_100, index_100):
