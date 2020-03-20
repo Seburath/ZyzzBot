@@ -2,6 +2,7 @@ import math
 import time
 from save_excel import save
 
+
 while True:
     print("//////////////////", time.strftime("%d/%m/%y"), "///////////////////")
     print("(genero, estatura, peso, cuello, cintura, cadera)")
