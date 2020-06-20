@@ -17,7 +17,7 @@ while True:
     print("(genero, estatura, peso, cuello, cintura, cadera)")
     print( "   ", genere, "    ", height, " ",weight," ", neck, "  ",waist, "   ",hip)
 
-    if genere is 'm':
+    if genere == 'm':
     #calculate basic data
         body_fat = 495/(1.0324 - 0.19077 * math.log((waist-neck), 10) + 0.15456 * math.log(height, 10)) - 450
         fat_mass = (body_fat/100) * weight
@@ -31,7 +31,7 @@ while True:
         index_100 = (body_fat_100 + ffmi_100)/2
 
 
-    if genere is 'f':
+    if genere == 'f':
         # calculate basic data
         body_fat = 495 / (1.29579 - 0.35004 * math.log((waist + hip - neck), 10) + 0.22100 * math.log(height, 10)) - 450
         fat_mass = (body_fat/100) * weight
