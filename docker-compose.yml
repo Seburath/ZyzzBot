@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  postgres_db:
+    image: postgres:11.1
+    container_name: goldendb
+    environment:   # Set up postgres database name and password
+      POSTGRES_PASSWORD: goldenpass
+      POSTGRES_DB: goldendb
+      POSTGRES_USER: goldendb
+    ports:
+      - 5432:5432
+    networks:
+      - app-tier
+    volumes:
+
+      - ./postgres:/docker-entrypoint-initdb.d
+  goldenbot:
+    image: goldenbot
+    container_name: goldenbot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - postgres_db
+    ports:
+      - "80:80"
+    networks:
+      - app-tier
+    volumes:
+      - .:/opt/
+    environment:
+      - PORT=80
+
+networks:
+  app-tier:
+    driver: bridge
