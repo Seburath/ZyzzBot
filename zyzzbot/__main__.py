@@ -23,7 +23,7 @@ def main():
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
 
-    chat_id = 00000000
+    chat_id = -7
     token = ""
     db = DBMan("PGContainer")
 

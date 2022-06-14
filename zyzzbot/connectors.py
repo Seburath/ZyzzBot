@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 class Connector:
     def __init__(self, conntype):
         if conntype == "PGContainer":
-            self.conn = "postgresql+psycopg2://goldendb:goldenpass@goldendb"
+            self.conn = "postgresql+psycopg2://zyzzdb:zyzzpass@zyzzdb"
         elif conntype == "Test":
             self.conn = "sqlite:///:memory:"
 

@@ -1,12 +1,12 @@
 version: '3.8'
 services:
-  postgres_db:
+  zyzzdb:
     image: postgres:11.1
-    container_name: goldendb
-    environment:   # Set up postgres database name and password
-      POSTGRES_PASSWORD: goldenpass
-      POSTGRES_DB: goldendb
-      POSTGRES_USER: goldendb
+    container_name: zyzzdb
+    environment:
+      POSTGRES_PASSWORD: zyzzpass
+      POSTGRES_DB: zyzzdb
+      POSTGRES_USER: zyzzdb
     ports:
       - 5432:5432
     networks:
@@ -14,14 +14,15 @@ services:
     volumes:
 
       - ./postgres:/docker-entrypoint-initdb.d
-  goldenbot:
-    image: goldenbot
-    container_name: goldenbot
+
+  zyzzbot:
+    image: zyzzbot
+    container_name: zyzzbot
     build:
       context: .
       dockerfile: ./Dockerfile
     depends_on:
-      - postgres_db
+      - zyzzdb
     ports:
       - "80:80"
     networks:
